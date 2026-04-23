@@ -4,11 +4,15 @@ import { Provider } from 'react-redux'
 import './index.css'
 import App from './App.jsx'
 import { store } from './store/store.js'
+import { BrowserRouter } from 'react-router-dom'
+import "./config/interceptor";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </StrictMode>,
 )
